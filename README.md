@@ -1,4 +1,7 @@
 # Tentamen i Webbramverk
+
+Kom ihåg att varje deluppgift måste lösas i en individuell branch. Om ni inte har separata branches kan ni max uppnå halva poängen per uppgift. Uppgift 1 = en branch. Uppgift 2 = en branch osv.
+
 ## Klona projektet
 
 1. Klona projektet med git clone i en mapp och öppna i VSCode.
@@ -7,6 +10,15 @@
 1. Aktivera miljön och installera dependencies:
 2. pip install -r requirements.txt
 
+## Koppla till eget repo
+
+1. Skapa ett repo på github som ni håller privat.
+2. Klicka inte i något av fälten som dyker upp. Ni har redan readme, gitignore i detta repo.
+3. I terminalen tar ni bort kopplingen till mitt repo:
+- git remote remove origin
+5. Följ githubs instruktioner för att koppla det klonade repot till er egen github. Oftast något i stil med:
+- git remote add origin https://yourlinkhere....
+6. Använd sedan GUI eller terminalen för att skapa branches.
 
 Uppskattad tid: 1h för installation och att bekanta sig med koden. Ca 4-5 h för att skriva uppgifterna.
 
@@ -15,26 +27,26 @@ Uppskattad tid: 1h för installation och att bekanta sig med koden. Ca 4-5 h fö
 **Varje uppgift ska lösas i en egen branch. Kom ihåg att göra commits efter varje uppgift i en ny branch**. Detta är ett måste för att få full pott på uppgifterna. Om ni inte gör detta halveras maxpoängen per uppgift även om ni har 100 % korrekt lösning.
 Ingen databas ska installeras utan all data ska skapas i Python med faker eller manuellt.
 
-### Uppgift 1: Flask-grunder (ca 1h)
+### Uppgift 1: Flask-grunder (10 p)
 
 1. Skapa app.py med en Flask-applikation.
 2. Skapa följande routes:
-3. / → visar texten "Välkommen till Flask-övningen!" i ett HTML-element.
+3. En home branch som visar texten "Välkommen till Flask-övningen!" i ett HTML-element.
 4. /about → visar en kort beskrivning av sidan (använd Lorem Ipsum).
 5. Applikationen ska köras i debug-läge.
 
-### Uppgift 2: Python-klasser och testdata (ca 1h)
+### Uppgift 2: Python-klasser och testdata (10 p)
 
 1. Skapa en Python-klass Product med attribut:
-  2. id (int)
-  3. name (str)
-  4. price (float)
-  5. category (str)
-6. Skapa en funktion get_random_products() som returnerar en lista med 5–10 produkter (manuellt eller med Faker).
-7. Skapa en route /products som visar alla produkter i en HTML-tabell.
-8. Kolumner: ID, Name, Price, Category
+  - id (int)
+  - name (str)
+  - price (float)
+  - category (str)
+1. Skapa en funktion get_random_products() som returnerar en lista med 5–10 produkter (manuellt eller med Faker).
+1. Skapa en route /products som visar alla produkter i en HTML-tabell.
+1. Kolumner: ID, Name, Price, Category
 
-### Uppgift 3: Templates och Jinja (ca 1h)
+### Uppgift 3: Templates och Jinja (10 p)
 
 1. Skapa en base-template base.html som innehåller <head> och <body>-struktur.
 2. Skapa en template products.html som ärver från base.html:
@@ -43,7 +55,7 @@ Ingen databas ska installeras utan all data ska skapas i Python med faker eller 
 5. Lägg till en navbar i en separat fil _navbar.html med länkar till / och /products.
 6. Inkludera navbaren i base-template med {% include '_navbar.html' %}.
 
-### Uppgift 4: Detaljvy och bug-fix (ca 1h)
+### Uppgift 4: Detaljvy och bug-fix (10 p)
 
 1. Skapa en route /product/<int:id> som visar detaljer för en produkt.
 2. Visa all information i ett paragraf-element.
@@ -52,12 +64,12 @@ Ingen databas ska installeras utan all data ska skapas i Python med faker eller 
 5. Fixa templaten så den fungerar korrekt.
 6. Lägg till en länk till den i navbaren.
 
-### Uppgift 5: JavaScript-funktioner (ca 1h)
+### Uppgift 5: JavaScript-funktioner (10 p)
 
-1. Skapa scripts.js och inkludera den i <head> i base.html.
+1. Skapa scripts.js och inkludera den i din HTML så att resultatet syns i webbläsarens konsol.
 2. Lös följande uppgifter och logga resultatet med console.log():
-3. Funktion sayHello(name) → returnerar "Hej, name" med template-string.
-4. Skapa en array prices med siffrorna 10, 20, 30, 40, 50. Lägg till 60 i slutet av arrayen. Logga arrayens längd.
-5. Funktion isExpensive(price) → returnerar "Dyr" om pris > 30, annars "Billig".
-6. Samma funktion med ternary-operator (? :) → isExpensiveTernary(price).
+3. Funktion sayHello(name) som returnerar "Hej, name" med template-string.
+4. Skapa en array prices med siffrorna 10, 20, 30, 40, 50. Lägg till 60 i slutet av arrayen. Logga sedan arrayens längd.
+5. Funktion isExpensive(price) som returnerar "Dyr" om pris > 30, annars "Billig".
+6. Samma funktion som ovan fast med ternary-operator (? :). Funktionen ska kallas isExpensiveTernary(price).
 7. For-loop som skriver ut alla jämna tal mellan två parametrar start och end.
