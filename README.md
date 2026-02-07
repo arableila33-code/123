@@ -5,10 +5,8 @@ Kom ihåg att varje deluppgift måste lösas i en individuell branch. Om ni inte
 ## Klona projektet
 
 1. Klona projektet med git clone i en mapp och öppna i VSCode.
-1. Skapa en virtuell miljö:
-1. python -m venv venv
-1. Aktivera miljön och installera dependencies:
-2. pip install -r requirements.txt
+1. Skapa en virtuell miljö.
+1. Aktivera miljön och installera dependencies från requirements.txt.
 
 ## Koppla till eget repo
 
