@@ -38,19 +38,19 @@ Ingen databas ska installeras utan all data ska skapas i Python med faker eller 
 ### Uppgift 2: Python-klasser och testdata (10 p)
 
 1. Skapa en Python-klass Product med attribut:
-  - id (int)
-  - name (str)
-  - price (float)
-  - category (str)
-1. Skapa en funktion get_random_products() som returnerar en lista med 5–10 produkter (manuellt eller med Faker).
-1. Skapa en route /products som visar alla produkter i en HTML-tabell.
-1. Kolumner: ID, Name, Price, Category
+  - i​​​​​​​​d (int)
+  - ​​​name (str)
+  - pr​​​i​ce (float)
+  - cate​g​o​ry (str)
+1. Skap​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​a en funktion get_random_products() som returnerar en lista med 5–10 produkter (manuellt eller med Faker).
+1. Sk​​​​ap​a en ro​​​ute /products som visar alla produ​​​​​​​​​​​​​kter i en HTML-tabell.
+1. Kol​​​​​​​umner: ID, Na​​​​​​​​​me, Pr​​​​​​ice, Cate​​​​gory
 
 ### Uppgift 3: Templates och Jinja (10 p)
 
 1. Skapa en base-template base.html som innehåller <head> och <body>-struktur.
 2. Skapa en template products.html som ärver från base.html:
-3. Rubrik: "Produktlista"
+3. Rubrik: "Pro​​​​​​​​​​​duktlista"
 4. Tabellen från /products ska visas här.
 5. Lägg till en navbar i en separat fil _navbar.html med länkar till / och /products.
 6. Inkludera navbaren i base-template med {% include '_navbar.html' %}.
