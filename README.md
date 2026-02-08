@@ -22,50 +22,48 @@ Uppskattad tid: 1h för installation och att bekanta sig med koden. Ca 4-5 h fö
 
 ## Uppgifter
 
-**Varje uppgift ska lösas i en egen branch. Kom ihåg att göra commits efter varje uppgift i en ny branch**. Detta är ett måste för att få full pott på uppgifterna. Om ni inte gör detta halveras maxpoängen per uppgift även om ni har 100 % korrekt lösning.
+**Varje uppgift ska lösas i en egen branch. Kom ihåg att göra commits efter varje uppgift i en ny branch. Att skapa branches och göra commits är inkluderat i skrivtiden.**. Detta är ett måste för att få full pott på uppgifterna. Om ni inte gör detta halveras maxpoängen per uppgift även om ni har 100 % korrekt lösning.
 Ingen databas ska installeras utan all data ska skapas i Python med faker eller manuellt.
+Styling är inget examinerande moment och ni behöver inte skriva eller länka till någon css alls.
 
 ### Uppgift 1: Flask-grunder (10 p)
 
 1. Skapa app.py med en Flask-applikation.
-2. Skapa följande routes:
-3. En home branch som visar texten "Välkommen till Flask-övningen!" i ett HTML-element.
-4. /about → visar en kort beskrivning av sidan (använd Lorem Ipsum).
-5. Applikationen ska köras i debug-läge.
+2. Applikationen ska köras i debug-läge.
+3. Skapa följande routes:
+- En home branch som visar texten "Välkommen till min sluttentamen" i ett lämpligt HTML-element. Bilden som finns i static-mappen ska även länkas på hemsidan.
+- En about us som visar en kort beskrivning av sidan. Använd Lorem Ipsum eller kopiera in text från någon nyhetsartikel eller liknande. Använd ett lämpligt HTML-element för detta.
 
 ### Uppgift 2: Python-klasser och testdata (10 p)
 
-1. Skapa en Python-klass Product med attribut:
-  - i​​​​​​​​d (int)
-  - ​​​name (str)
-  - pr​​​i​ce (float)
-  - cate​g​o​ry (str)
+1. Skapa en Python-klass Product med följande attribut:
+  - i​​​​​​​​d
+  - ​​​name
+  - pr​​​i​ce
+  - cate​g​o​ry
+  - ingredients
 1. Skap​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​a en funktion get_random_products() som returnerar en lista med 5–10 produkter (manuellt eller med Faker).
-1. Sk​​​​ap​a en ro​​​ute /products som visar alla produ​​​​​​​​​​​​​kter i en HTML-tabell.
-1. Kol​​​​​​​umner: ID, Na​​​​​​​​​me, Pr​​​​​​ice, Cate​​​​gory
+1. Sk​​​​ap​a en ro​​​ute som visar alla produ​​​​​​​​​​​​​kter i en HTML-tabell. Tabellen ska innehålla kolumnerna från klassen ni skapade. Templaten ni skriver här ska endast innehålla en HTML-tabell. Ingen <head>-tagg eller liknande.
 
 ### Uppgift 3: Templates och Jinja (10 p)
 
-1. Skapa en base-template base.html som innehåller <head> och <body>-struktur.
-2. Skapa en template products.html som ärver från base.html:
-3. Rubrik: "Pro​​​​​​​​​​​duktlista"
-4. Tabellen från /products ska visas här.
-5. Lägg till en navbar i en separat fil _navbar.html med länkar till / och /products.
-6. Inkludera navbaren i base-template med {% include '_navbar.html' %}.
+1. Skapa en bas-template som innehåller standard HTML-struktur (!+tab i VSCode). Lägg till er själva som author i relevant tagg.
+2. Tabellen från föregående uppgift ska visas här. Ni ska alltså se till att tabellen från föregående uppgift på något sätt hamnar i er bas-template.
+3. Lägg till en navbar i en separat fil _navbar.html med länkar till era routes.
+4. Inkludera navbaren i er bas-template.
 
 ### Uppgift 4: Detaljvy och bug-fix (10 p)
 
-1. Skapa en route /product/<int:id> som visar detaljer för en produkt.
-2. Visa all information i ett paragraf-element.
-3. Om produkten inte finns, returnera "Produkt hittades inte".
-4. Skapa en template product_detail_faulty.html med felaktig Jinja som försöker visa en produkt.
-5. Fixa templaten så den fungerar korrekt.
-6. Lägg till en länk till den i navbaren.
+1. I koden finns det en blueprint som ska visa detaljerna för en specifik produkt men den innehåller dessvärre buggar.
+2. Av någon anledning så går det inte att nå vår blueprint och ni måste registrera denna.
+3. Lägg till en länk till denna route i er navbar.
+4. Templaten som finns länkad innehåller ett antal fel som ni måste rätta till. Målet är att vi ska kunna se produktens attribut som text på skärmen.
+5. Om produkten inte finns, returnera "Produkt hittades inte".
 
 ### Uppgift 5: JavaScript-funktioner (10 p)
 
-1. Skapa scripts.js och inkludera den i din HTML så att resultatet syns i webbläsarens konsol.
-2. Lös följande uppgifter och logga resultatet med console.log():
+1. Skapa en script-fil och inkludera den i din HTML så att resultatet går att se i webbläsarens konsol. Använd strict mode i er fil.
+2. Lös följande uppgifter och logga resultaten med console.log():
 3. Funktion sayHello(name) som returnerar "Hej, name" med template-string.
 4. Skapa en array prices med siffrorna 10, 20, 30, 40, 50. Lägg till 60 i slutet av arrayen. Logga sedan arrayens längd.
 5. Funktion isExpensive(price) som returnerar "Dyr" om pris > 30, annars "Billig".
