@@ -1,0 +1,10 @@
+{# Exercise 4. Show details for a single product #}
+
+{% for products in product %}
+
+{# We need to show product details as pure text. No table is needed #}
+    {{products.id}}
+    {{products.name}}
+    {{products.price}}
+    {{products.category}}
+    {{products.not_implemented}}

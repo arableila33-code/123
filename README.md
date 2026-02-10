@@ -2,6 +2,8 @@
 
 Kom ihåg att varje deluppgift måste lösas i en individuell branch. Om ni inte har separata branches kan ni max uppnå halva poängen per uppgift. Uppgift 1 = en branch. Uppgift 2 = en branch osv.
 
+Styling med css är inte en examinerande del. Ni behöver alltså inte lägga ner någon tid på att ändra färger eller utseende.
+
 ## Klona projektet
 
 1. Klona projektet med git clone i en mapp och öppna i VSCode.
@@ -31,9 +33,9 @@ Styling är inget examinerande moment och ni behöver inte skriva eller länka t
 
 1. Skapa app.py med en Flask-applikation.
 2. Applikationen ska köras i debug-läge.
-3. Skapa följande routes:
-    - En home branch som visar texten "Välkommen till min sluttentamen" i ett lämpligt HTML-element. Bilden som finns i static-mappen ska även länkas på hemsidan.
-    - En about us som visar en kort beskrivning av sidan. Använd Lorem Ipsum eller kopiera in text från någon nyhetsartikel eller liknande. Använd ett lämpligt HTML-element för detta.
+3. Skapa följande routes som skickar tillbaka html-templates:
+    - En home route som visar texten "Välkommen till min sluttentamen" i ett lämpligt HTML-element. Bilden som finns i static-mappen ska även länkas på startsidan (home). Ingen styling behövs
+    - En about us-template som visar en kort beskrivning av sidan. Använd Lorem Ipsum eller kopiera in text från någon nyhetsartikel eller liknande. Använd ett lämpligt HTML-element för denna text.
 
 ### Uppgift 2: Python-klasser och testdata (10 p)
 
@@ -44,22 +46,25 @@ Styling är inget examinerande moment och ni behöver inte skriva eller länka t
     - cate​g​o​ry
     - ingredients
 1. Skap​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​a en funktion get_random_products() som returnerar en lista med 5–10 produkter (manuellt eller med Faker).
-1. Sk​​​​ap​a en ro​​​ute som visar alla produ​​​​​​​​​​​​​kter i en HTML-tabell. Tabellen ska innehålla kolumnerna från klassen ni skapade. Templaten ni skriver här ska endast innehålla en HTML-tabell. Ingen <head>-tagg eller liknande.
+1. Sk​​​​ap​a en ro​​​ute som visar alla produ​​​​​​​​​​​​​kter i en HTML-tabell. Tabellen ska innehålla kolumnerna från klassen ni skapade. Templaten ni skriver här ska endast innehålla en HTML-tabell och ska endast innehålla produkt-datan. Alltså inget arv från en bas-template på denna uppgift.
 
 ### Uppgift 3: Templates och Jinja (10 p)
 
-1. Skapa en bas-template som innehåller standard HTML-struktur (!+tab i VSCode). Lägg till er själva som author i relevant tagg.
-2. Tabellen från föregående uppgift ska visas här. Ni ska alltså se till att tabellen från föregående uppgift på något sätt hamnar i er bas-template.
+1. Skapa en bas-template som innehåller standard HTML-struktur (!+tab i VSCode). Lägg till er själva med ert namn som author i relevant tagg.
+2. Tabellen från föregående uppgift ska nu ärva denna bas-template.
 3. Lägg till en navbar i en separat fil _navbar.html med länkar till era routes.
-4. Inkludera navbaren i er bas-template.
+4. Inkludera navbaren i er bas-template och se till att det går att nå de olika länkarna:
+    - Home
+    - About Us
+    - Products
 
 ### Uppgift 4: Detaljvy och bug-fix (10 p)
 
 1. I koden finns det en blueprint som ska visa detaljerna för en specifik produkt men den innehåller dessvärre buggar.
 2. Av någon anledning så går det inte att nå vår blueprint och ni måste registrera denna.
-3. Lägg till en länk till denna route i er navbar.
+3. Lägg till en länk till denna route i er tabell som ett extra fält. Ni behöver en a-länk som ger oss korrekt produkt.
 4. Templaten som finns länkad innehåller ett antal fel som ni måste rätta till. Målet är att vi ska kunna se produktens attribut som text på skärmen.
-5. Om produkten inte finns, returnera "Produkt hittades inte".
+5. Om produkten inte finns, visa "Produkt hittades inte" på sidan som text.
 
 ### Uppgift 5: JavaScript-funktioner (10 p)
 
