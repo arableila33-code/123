@@ -11,12 +11,13 @@ Kom ihåg att varje deluppgift måste lösas i en individuell branch. Om ni inte
 ## Koppla till eget repo
 
 1. Skapa ett repo på github som ni håller privat.
-2. Klicka inte i något av fälten som dyker upp. Ni har redan readme, gitignore i detta repo.
-3. I terminalen tar ni bort kopplingen till mitt repo:
-- git remote remove origin
-5. Följ githubs instruktioner för att koppla det klonade repot till er egen github. Oftast något i stil med:
-- git remote add origin https://yourlinkhere....
-6. Använd sedan GUI eller terminalen för att skapa branches.
+1. Ni har redan .gitignore och readme i detta repo. Klicka endast i att repot ska hållas Privat och lämna resten tomma.
+1. I terminalen i VSCode tar ni bort kopplingen till mitt repo:
+    - git remote remove origin
+1. Följ githubs instruktioner för att koppla det klonade repot till er egen github. Oftast något i stil med:
+    - git remote add origin your-GitHub-link-here
+1. Använd git remote -v i terminalen för att kontrollera kopplingen. Er remote-länk bör dyka upp här innan ni fortsätter med tentamen.
+1. Använd sedan GUI eller terminalen för att skapa branches.
 
 Uppskattad tid: 1h för installation och att bekanta sig med koden. Ca 4-5 h för att skriva uppgifterna.
 
@@ -31,17 +32,17 @@ Styling är inget examinerande moment och ni behöver inte skriva eller länka t
 1. Skapa app.py med en Flask-applikation.
 2. Applikationen ska köras i debug-läge.
 3. Skapa följande routes:
-- En home branch som visar texten "Välkommen till min sluttentamen" i ett lämpligt HTML-element. Bilden som finns i static-mappen ska även länkas på hemsidan.
-- En about us som visar en kort beskrivning av sidan. Använd Lorem Ipsum eller kopiera in text från någon nyhetsartikel eller liknande. Använd ett lämpligt HTML-element för detta.
+    - En home branch som visar texten "Välkommen till min sluttentamen" i ett lämpligt HTML-element. Bilden som finns i static-mappen ska även länkas på hemsidan.
+    - En about us som visar en kort beskrivning av sidan. Använd Lorem Ipsum eller kopiera in text från någon nyhetsartikel eller liknande. Använd ett lämpligt HTML-element för detta.
 
 ### Uppgift 2: Python-klasser och testdata (10 p)
 
 1. Skapa en Python-klass Product med följande attribut:
-  - i​​​​​​​​d
-  - ​​​name
-  - pr​​​i​ce
-  - cate​g​o​ry
-  - ingredients
+    - i​​​​​​​​d
+    - ​​​name
+    - pr​​​i​ce
+    - cate​g​o​ry
+    - ingredients
 1. Skap​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​a en funktion get_random_products() som returnerar en lista med 5–10 produkter (manuellt eller med Faker).
 1. Sk​​​​ap​a en ro​​​ute som visar alla produ​​​​​​​​​​​​​kter i en HTML-tabell. Tabellen ska innehålla kolumnerna från klassen ni skapade. Templaten ni skriver här ska endast innehålla en HTML-tabell. Ingen <head>-tagg eller liknande.
 
