@@ -1,6 +1,7 @@
 # Tentamen i Webbramverk
 
 Kom ihåg att varje deluppgift måste lösas i en individuell branch. Om ni inte har separata branches kan ni max uppnå halva poängen per uppgift. Uppgift 1 = en branch. Uppgift 2 = en branch osv.
+Det viktiga är att ni jobbar i olika branches och jag kommer att kolla er historik på hur ni har löst uppgifterna. Om ni inte har perfekt historik mellan era branches är det helt ok. Ni behöver inte göra en merge till main mellan varje branch utan det räcker med att pusha upp era branches till github.
 
 Styling med css är inte en examinerande del. Ni behöver alltså inte lägga ner någon tid på att ändra färger eller utseende.
 
