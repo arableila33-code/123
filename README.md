@@ -35,7 +35,7 @@ Uppskattad tid: 1h för installation och att bekanta sig med koden. Ca 4-5 h fö
 Ingen databas ska installeras utan all data ska skapas i Python med faker eller manuellt.
 Styling är inget examinerande moment och ni behöver inte skriva eller länka till någon css alls.
 
-### Uppgift 1: Flask-grunder (10 p)
+### Uppgift 1: Flask-grunder (9 p)
 
 1. Skapa app.py med en Flask-applikation.
 2. Applikationen ska köras i debug-läge.
@@ -45,7 +45,7 @@ Styling är inget examinerande moment och ni behöver inte skriva eller länka t
 
 ---
 
-### Uppgift 2: Python-klasser och testdata (10 p)
+### Uppgift 2: Python-klasser och testdata (9 p)
 
 1. Skapa en Python-klass Product med följande attribut:
     - i​​​​​​​​d
@@ -58,7 +58,7 @@ Styling är inget examinerande moment och ni behöver inte skriva eller länka t
 
 ---
 
-### Uppgift 3: Templates och Jinja (10 p)
+### Uppgift 3: Templates och Jinja (12 p)
 
 1. Skapa en bas-template som innehåller standard HTML-struktur (!+tab i VSCode). Lägg till er själva med ert namn som author i relevant tagg.
 2. Tabellen från föregående uppgift ska nu ärva denna bas-template.
@@ -70,17 +70,16 @@ Styling är inget examinerande moment och ni behöver inte skriva eller länka t
 
 ---
 
-### Uppgift 4: Detaljvy och bug-fix (10 p)
+### Uppgift 4: Detaljvy och bug-fix (12 p)
 
-1. I koden finns det en blueprint med en route som ska visa detaljerna för en specifik produkt men den innehåller dessvärre buggar.
-2. Av någon anledning så går det inte att nå vår blueprint och ni måste registrera denna.
-3. Lägg till en länk till denna route i er tabell som ett extra fält. Ni behöver en a-länk som ger oss korrekt produkt.
-4. Templaten som finns länkad innehåller ett antal fel som ni måste rätta till. Målet är att vi ska kunna se produktens attribut som text på skärmen.
-5. Om produkten inte finns, visa "Produkt hittades inte" på sidan som text.
+1. I koden finns det en blueprint med en route som ska visa detaljerna för en specifik produkt men den innehåller dessvärre buggar. Av någon anledning så går det inte att nå vår blueprint och ni måste registrera denna.
+2. Lägg till en länk till denna route i er tabell som ett extra fält.
+3. Templaten som finns länkad innehåller ett antal fel som ni måste rätta till. Målet är att vi ska kunna se produktens attribut som text på skärmen.
+4. Om produkten inte finns, visa "Produkt hittades inte" på sidan som text.
 
 ---
 
-### Uppgift 5: JavaScript-funktioner (10 p)
+### Uppgift 5: JavaScript-funktioner (14 p)
 
 1. Skapa en script-fil och inkludera den i din HTML så att resultatet går att se i webbläsarens konsol. Använd strict mode i er fil.
 2. Lös följande uppgifter och logga resultaten med console.log():
@@ -128,7 +127,7 @@ Styling is not part of the assessment, and you do not need to write or link any 
 
 ---
 
-## Task 1: Flask Basics (10 points)
+## Task 1: Flask Basics (9 points)
 
 1. Create `app.py` with a Flask application.
 2. The application should run in debug mode.
@@ -138,7 +137,7 @@ Styling is not part of the assessment, and you do not need to write or link any 
 
 ---
 
-## Task 2: Python Classes and Test Data (10 points)
+## Task 2: Python Classes and Test Data (9 points)
 
 1. Create a Python class `Product` with the following attributes:
    * id
@@ -151,7 +150,7 @@ Styling is not part of the assessment, and you do not need to write or link any 
 
 ---
 
-## Task 3: Templates and Jinja (10 points)
+## Task 3: Templates and Jinja (12 points)
 
 1. Create a base template that contains a standard HTML structure (`! + tab` in VSCode). Add yourself with your name as the author in the relevant tag.
 2. The table from the previous task should now inherit from this base template.
@@ -164,17 +163,16 @@ Styling is not part of the assessment, and you do not need to write or link any 
 
 ---
 
-## Task 4: Detail View and Bug Fix (10 points)
+## Task 4: Detail View and Bug Fix (12 points)
 
-1. In the code, there is a blueprint with a route that should display the details of a specific product, but it unfortunately contains bugs.
-2. For some reason, the blueprint cannot be reached, and you must register it.
-3. Add a link to this route in your table as an extra field. You need an `<a>` link that provides the correct product.
-4. The linked template contains several errors that you must fix. The goal is to display the product’s attributes as text on the screen.
-5. If the product does not exist, display “Product not found” as text on the page.
+1. In the code, there is a blueprint with a route that should display the details of a specific product, but it unfortunately contains bugs. For some reason, the blueprint cannot be reached, and you must register it.
+2. Add a link to this route in your table as an extra field.
+3. The linked template contains several errors that you must fix. The goal is to display the product’s attributes as text on the screen.
+4. If the product does not exist, display “Product not found” as text on the page.
 
 ---
 
-## Task 5: JavaScript Functions (10 points)
+## Task 5: JavaScript Functions (14 points)
 
 1. Create a script file and include it in your HTML so that the result can be seen in the browser console. Use strict mode in your file.
 2. Solve the following tasks and log the results using `console.log()`:
